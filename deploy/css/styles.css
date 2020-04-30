@@ -317,18 +317,22 @@ template {
 /* =============
     Base
 ============= */
+ul {
+  padding: 0;
+  margin: 0; }
+  ul li {
+    list-style: none; }
+
 .show-for-medium {
   display: none; }
   @media (min-width: 768px) {
     .show-for-medium {
       display: block; } }
-
 .show-for-large {
   display: none; }
   @media (min-width: 992px) {
     .show-for-large {
       display: block; } }
-
 /* =============
     Typography
 ============= */
@@ -367,12 +371,27 @@ footer {
     grid-area: footer; }
 
 /* =============
+    Section-1
+============= */
+#section-1 {
+  background-image: url("../img/section-1/hero.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 360px; }
+  @media (min-width: 768px) {
+    #section-1 {
+      height: 670px; } }
+/* =============
     Section-2
 ============= */
 #section-2 {
   display: grid;
   grid-template-columns: 10px auto 10px;
-  grid-template-areas: ". section-2 ."; }
+  grid-template-areas: ". section-2 .";
+  padding: 60px 0; }
+  @media (min-width: 992px) {
+    #section-2 {
+      padding: 100px 0; } }
   @media (min-width: 1200px) {
     #section-2 {
       grid-template-columns: auto 1200px auto; } }
@@ -386,6 +405,8 @@ footer {
     @media (min-width: 768px) {
       #section-2 > div #section-2-first > div {
         grid-area: section-2-first; } }
+    #section-2 > div #section-2-first > div h1 {
+      color: #F8C832; }
     @media (min-width: 992px) {
       #section-2 > div #section-2-middle {
         display: grid;
@@ -405,7 +426,32 @@ footer {
     @media (min-width: 768px) {
       #section-2 > div #section-2-last > div {
         grid-area: section-2-last; } }
+/* =============
+    Section-4
+============= */
+@media (min-width: 1200px) {
+  #section-4 {
+    display: grid;
+    grid-template-columns: auto 1200px auto;
+    grid-template-areas: ". section-4 ."; } }
 
+#section-4 > div {
+  background-image: url("../img/section-4/hero.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 420px; }
+  @media (min-width: 768px) {
+    #section-4 > div {
+      height: 770px;
+      background-position-x: -320px; } }
+  @media (min-width: 992px) {
+    #section-4 > div {
+      height: 683px;
+      background-position-x: 0px; } }
+  @media (min-width: 1200px) {
+    #section-4 > div {
+      grid-area: section-4; } }
 /* =============
     Section-3
 ============= */
@@ -424,15 +470,26 @@ footer {
   #section-3 > div {
     grid-area: section-3; } }
 
+#section-3 > div aside {
+  background-image: url("../img/section-3/robot.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 380px; }
+  @media (min-width: 768px) {
+    #section-3 > div aside {
+      height: 476px; } }
 #section-3 > div section {
   display: grid;
   grid-template-columns: 10px auto 10px;
-  grid-template-areas: ". section-2 ."; }
+  grid-template-areas: ". section-3-text .";
+  background-color: #222222;
+  color: #fff;
+  padding: 60px 0; }
   @media (min-width: 768px) {
     #section-3 > div section {
       grid-template-columns: 10% auto 10%; } }
   #section-3 > div section > div {
-    grid-area: section-2; }
+    grid-area: section-3-text; }
 
 /* =============
     Section-5
@@ -440,7 +497,14 @@ footer {
 #section-5 {
   display: grid;
   grid-template-columns: 10px auto 10px;
-  grid-template-areas: ". section-5 ."; }
+  grid-template-areas: ". section-5 .";
+  padding: 60px 0; }
+  @media (min-width: 768px) {
+    #section-5 {
+      padding: 54px 0; } }
+  @media (min-width: 992px) {
+    #section-5 {
+      padding: 100px 0; } }
   @media (min-width: 1200px) {
     #section-5 {
       grid-template-columns: auto 1200px auto; } }

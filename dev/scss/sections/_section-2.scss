@@ -5,6 +5,11 @@
     display: grid;
     grid-template-columns: 10px auto 10px;
     grid-template-areas: ". section-2 .";
+    padding: 60px 0;
+
+    @include lg{
+        padding: 100px 0;
+    }
 
     @include xl{
         grid-template-columns: auto 1200px auto;
@@ -23,6 +28,9 @@
             >div{
                 @include md{
                     grid-area: section-2-first;
+                }
+                h1{
+                    color: $yellow;
                 }
             }
         }
